@@ -1,32 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+	<TableLayout
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+		android:minWidth="25px"
 
-    </android.support.design.widget.AppBarLayout>
+		android:minHeight="25px"
 
-    <include layout="@layout/content_main" />
+		android:layout_width="match_parent"
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+		android:layout_height="match_parent"
+
+		android:id="@+id/tableLayout1">
+
+		<TableRow
+
+			android:id="@+id/tableRow1">
+
+			<TextView
+
+				android:text="Food Item:"
+
+				android:textAppearance="?android:attr/textAppearanceMedium"
+
+				android:layout_column="0"
+
+				android:id="@+id/foodTv" />
+
+			<Spinner
+
+				android:layout_column="1"
+
+				android:id="@+id/menuSpinner" />
+
+				
+
+			
+
+		</TableRow>
+
+		<TableRow
+
+			android:id="@+id/tableRow2">
+
+			<TextView
+
+				android:text="Price :"
+
+				android:textAppearance="?android:attr/textAppearanceMedium"
+
+				android:layout_column="0"
+
+				android:id="@+id/priceTv" />
+
+			<TextView
+
+				android:text=""
+
+				android:textAppearance="?android:attr/textAppearanceMedium"
+
+				android:layout_column="0"
+
+				android:id="@+id/priceOutputTv" />
+
+		</TableRow>
+
+		<TableRow
+
+			android:id="@+id/tableRow3">
+
+						<TextView
+
+				android:text="Quantity :"
+
+				android:textAppearance="?android:attr/textAppearanceMedium"
+
+				android:layout_column="0"
+
+				android:id="@+id/quantityTv" />
+
+				<SeekBar
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/c" />
+
+	
+		
+
+		</TableRow>
+
+		<TableRow
+
+			android:id="@+id/tableRow2">
+
+			<Button
+
+				android:text="Total"
+
+				android:layout_column="0"
+
+				android:id="@+id/totalBtn" />
+
+			<TextView
+
+				android:text=""
+
+				android:textAppearance="?android:attr/textAppearanceMedium"
+
+				android:layout_column="0"
+
+				android:id="@+id/totalTv" />
+
+
+		</TableRow>
+
+		<ImageView
+
+			android:src="@android:drawable/ic_menu_gallery"
+
+			
+
+			
+
+			android:id="@+id/foodImageView" />
+
+	</TableLayout>
+
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>
